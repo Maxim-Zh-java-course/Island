@@ -1,9 +1,15 @@
 package model;
 
 import abstraction.Animal;
+import settings.OrganismType;
 
 public class Wolf extends Animal {
+    private final OrganismType type;
 
+    public Wolf() {
+        this.type = OrganismType.WOLF;
+        this.energy = type.getMaxEnergy(); // начинаем с полной энергии
+    }
 
 
     @Override
