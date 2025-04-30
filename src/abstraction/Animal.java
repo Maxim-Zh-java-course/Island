@@ -1,38 +1,32 @@
 package abstraction;
 
+import model.Cell;
+import java.util.List;
+
 public abstract class Animal extends Organism {
+    protected int energy; // Энергия животного
+    protected Cell cell; // Клетка, в которой находится животное
 
-    protected int x, y;             // Координаты на острове
-    protected int energy = 20;      // Начальная энергия
-
-    public int getX() {
-        return x;
+    // Устанавливаем клетку для животного
+    public void setCell(Cell cell) {
+        this.cell = cell;
     }
 
-    public int getY() {
-        return y;
-    }
-
-    public void setPosition(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
+    // Получаем текущую энергию животного
     public int getEnergy() {
         return energy;
     }
 
-    public void decreaseEnergy() {
-        energy -= 3; // Например, каждый шаг тратит 3 энергии
+    @Override
+    public void die() {
+        super.die(); // Умираем
+        if (cell != null) {
+            cell.removeOrganism(this); // Убираем из клетки
+        }
     }
 
-    public void increaseEnergy(int amount) {
-        energy = Math.min(energy + amount, 100); // максимум 100
-    }
-
-    public abstract void move();
-
-    public abstract void eat();
-
-    public abstract void reproduction();
+    // Абстрактные методы для всех животных
+    public abstract void reproduction(List<Animal> newAnimals); // Размножение
+    public abstract void eat(List<Animal> animalsAround); // Поедание пищи
+    public abstract void move(); // Движение
 }
