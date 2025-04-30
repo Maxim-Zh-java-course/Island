@@ -8,7 +8,7 @@ public enum OrganismType {
     private final int notHungry;
     private final int speed;
 
-    OrganismType(int maxEnergy, int notHungry, int speed) {
+    OrganismType(int maxEnergy, int notHungry, int speed)  {
         this.maxEnergy = maxEnergy;
         this.notHungry = notHungry;
         this.speed = speed;

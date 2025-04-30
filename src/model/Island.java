@@ -22,7 +22,7 @@ public class Island {
         return cells[x][y];
     }
 
-    // Проверка на корректность координат
+    //Проверка на корректность координат
     public boolean isValidPosition(int x, int y) {
         return x >= 0 && x < width && y >= 0 && y < height;
     }

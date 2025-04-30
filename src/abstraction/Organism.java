@@ -1,7 +1,7 @@
 package abstraction;
 
 public abstract class Organism implements Runnable {
-    protected boolean isAlive = true; // Жив ли организм?
+    protected boolean isAlive = true; // Жив ли организм
 
     // Умираем
     public void die() {

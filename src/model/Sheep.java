@@ -82,7 +82,7 @@ public class Sheep extends Animal {
         while (isAlive) {
             move();
             try {
-                Thread.sleep(Settings.TICK_DURATION_MS); // Задержка для такта
+                Thread.sleep(Settings.TICK_DURATION_MS); //Задержка для такта
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
                 break;

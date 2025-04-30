@@ -10,7 +10,7 @@ public class Cell {
     private final int x;
     private final int y;
     private final Island island;
-    private final List<Organism> organisms = new ArrayList<>(); // Список организмов в клетке
+    private final List<Organism> organisms = new ArrayList<>(); //Список организмов в клетке
 
     // Конструктор клетки
     public Cell(int x, int y, Island island) {

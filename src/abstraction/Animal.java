@@ -19,7 +19,7 @@ public abstract class Animal extends Organism {
 
     @Override
     public void die() {
-        super.die(); // Умираем
+        super.die(); //Умираем
         if (cell != null) {
             cell.removeOrganism(this); // Убираем из клетки
         }

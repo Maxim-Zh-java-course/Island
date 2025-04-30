@@ -22,7 +22,7 @@ public class Grass extends Plant {
         Grass offspring = new Grass(); // Создаём новую траву
         if (this.cell != null) {
             offspring.setCell(this.cell); // Привязываем к клетке
-            cell.addOrganism(offspring); // Добавляем в клетку
+            cell.addOrganism(offspring); //Добавляем в клетку
         }
     }
 

@@ -13,7 +13,7 @@ public class StartSimulation {
 
     private final List<Animal> animals = new ArrayList<>();
     private final List<Plant> plants = new ArrayList<>();
-    private volatile boolean running = true; // Флаг для мягкой остановки
+    private volatile boolean running = true; // Флаг для остановки
 
     public void initialize() {
         island = new Island(20, 20); // Создаем остров размером 10x10
